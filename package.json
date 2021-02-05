@@ -1,0 +1,56 @@
+{
+  "name": "krabby-patty-bucket-list",
+  "version": "0.1.0",
+  "description": "A very simple one page application that lets you add, update and delete Krabby Patties from your Krabby Patty Bucket List!",
+  "main": "app.js",
+  "scripts": {
+    "createDB": "node db/createDB",
+    "prepopulate": "node db/prepopulate",
+    "build": "gulp compile",
+    "clean": "gulp clean",
+    "start": "node app",
+    "watch": "gulp start",
+    "heroku-postbuild": "gulp compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsaulrodriguez/krabby-patty-bucket-list.git"
+  },
+  "keywords": [
+    "express",
+    "express-handlebars",
+    "nodejs",
+    "bootstrap",
+    "krabby-patty",
+    "patties",
+    "burgers",
+    "krusty krab"
+  ],
+  "author": "David Rodriguez",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/davidsaulrodriguez/krabby-patty-bucket-list/issues"
+  },
+  "homepage": "https://github.com/davidsaulrodriguez/krabby-patty-bucket-list#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "del": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-live-server": "0.0.31",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "jquery": "^3.5.1",
+    "mysql": "^2.18.1",
+    "mysql-import": "^5.0.20",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
