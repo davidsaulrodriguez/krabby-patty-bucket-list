@@ -6,8 +6,8 @@ const password = process.env.DB_PASS;
 const database = process.env.DB_NAME;
 let db;
 
-if (process.env.JAWSDB_MARIA) {
-  db = mysql.createConnection(process.env.JAWSDB_MARIA);
+if (process.env.JAWSDB_MARIA_URL) {
+  db = mysql.createConnection(process.env.JAWSDB_MARIA_URL);
 } else {
   db = mysql.createConnection({
     host,
