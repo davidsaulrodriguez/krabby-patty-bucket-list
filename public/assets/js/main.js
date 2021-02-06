@@ -1,1 +1,0 @@
-// TODO: write some jQuery code on handle the DOM manipulation on the client side.
