@@ -1,1 +1,7 @@
--- TODO: Create some seed data to prepopulate the database for testing.
+USE krabbyPatty_db;
+
+INSERT INTO patties (name)
+VALUES ("Original Krabby Pattie");
+
+INSERT INTO patties (name, devoured)
+VALUES ("Deluxe Krabby Pattie", 1);

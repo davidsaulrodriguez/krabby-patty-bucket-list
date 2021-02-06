@@ -1,1 +1,36 @@
-{{!-- TODO: Create the index.handlebars code --}}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center mb-5">
+      <img src="./assets/imgs/patrick.gif" width="200px" alt="">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      {{#each patties}}
+        {{#unless devoured}}
+          {{> pattyBlock devoured=true}}
+        {{/unless}}
+      {{/each}}
+    </div>
+
+    <div class="col-sm-12 col-md-6">
+      {{#each patties}}
+        {{#if devoured}}
+          {{> pattyOptions devoured=false}}
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-sm-10 offset-sm-1 text-center">
+      <form class="form-inline justify-content-center" id="add-patty">
+        <label for="ap" aria-label="Add A New Patty"></label>
+        <input type="text" name="name" id="ap" class="text-center" maxlength="255" placeholder="Add a new patty!">
+        <input type="hidden" name="devoured" value="1" id="devoured">
+        <button type="submit" class="btn btn-success">add</button>
+      </form>
+    </div>
+  </div>
+</div>
