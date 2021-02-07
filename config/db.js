@@ -1,9 +1,9 @@
 require('dotenv').config();
 const mysql = require('mysql');
-const host = process.env.DB_HOST;
-const user = process.env.DB_USER;
-const password = process.env.DB_PASS;
-const database = process.env.DB_NAME;
+let host = process.env.DB_HOST;
+let user = process.env.DB_USER;
+let password = process.env.DB_PASS;
+let database = process.env.DB_NAME;
 let db;
 
 if (process.env.JAWSDB_MARIA_URL) {

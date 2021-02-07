@@ -1,6 +1,6 @@
 {
   "name": "krabby-patty-bucket-list",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A very simple one page application that lets you add, update and delete Krabby Patties from your Krabby Patty Bucket List!",
   "main": "app.js",
   "scripts": {
