@@ -1,10 +1,20 @@
 require('dotenv').config();
 const path = require('path');
 const Importer = require('mysql-import');
-const host = process.env.DB_HOST;
-const user = process.env.DB_USER;
-const password = process.env.DB_PASS;
-const importer = new Importer({host, user, password});
+let host = process.env.DB_HOST;
+let user = process.env.DB_USER;
+let password = process.env.DB_PASS;
+let importer;
+
+if (process.env.JAWSDB_MARIA_URL) {
+  importer = mysql.Importer(process.env.JAWSDB_MARIA_URL);
+} else {
+  importer = mysql.Importer({
+    host,
+    user,
+    password
+  });
+}
 
 importer.onProgress(progress=>{
   let percent = Math.floor(progress.bytes_processed / progress.total_bytes * 10000) / 100;
